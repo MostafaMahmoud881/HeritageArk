@@ -1,0 +1,25 @@
+{
+  "chat": {
+    "title": "دردشة الذكاء الاصطناعي للغات الأصلية",
+    "subtitle": "مارس اللغات المهددة بالانقراض من خلال المحادثة مع الذكاء الاصطناعي.",
+    "placeholder": "اكتب رسالة...",
+    "send": "إرسال",
+    "voiceInput": "إدخال صوتي",
+    "voiceOutput": "خرج صوتي",
+    "stopRecording": "إيقاف التسجيل",
+    "startRecording": "بدء التسجيل",
+    "selectLanguage": "اختر اللغة",
+    "selectDialect": "اختر اللهجة",
+    "translation": "ترجمة",
+    "pronunciation": "النطق",
+    "learningMode": "وضع التعلم",
+    "conversationMode": "وضع المحادثة",
+    "culturalContext": "السياق الثقافي",
+    "clearHistory": "مسح السجل",
+    "history": "سجل المحادثة",
+    "speakNow": "تحدث الآن...",
+    "listening": "جارٍ الاستماع...",
+    "processing": "جارٍ المعالجة...",
+    "error": "حدث خطأ. يرجى المحاولة مرة أخرى."
+  }
+}

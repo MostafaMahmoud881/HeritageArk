@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" fill="none">
+  <!-- Background -->
+  <rect width="192" height="192" rx="32" fill="#0B132B"/>
+  <!-- Outer ring -->
+  <circle cx="96" cy="96" r="64" stroke="#C9A84C" stroke-width="4"/>
+  <!-- Inner ring -->
+  <circle cx="96" cy="96" r="44" stroke="#C9A84C" stroke-width="2.5" stroke-dasharray="8 4"/>
+  <!-- Center diamond / gem -->
+  <path d="M96 52L128 96L96 140L64 96Z" fill="none" stroke="#D4A373" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M96 52L96 140" stroke="#D4A373" stroke-width="1.5" opacity="0.5"/>
+  <path d="M64 96L128 96" stroke="#D4A373" stroke-width="1.5" opacity="0.5"/>
+  <!-- Accent dots -->
+  <circle cx="96" cy="52" r="3" fill="#E9C46A"/>
+  <circle cx="96" cy="140" r="3" fill="#E9C46A"/>
+  <circle cx="64" cy="96" r="3" fill="#E9C46A"/>
+  <circle cx="128" cy="96" r="3" fill="#E9C46A"/>
+  <!-- HV text -->
+  <text x="96" y="190" text-anchor="middle" fill="#C9A84C" font-family="serif" font-size="10" font-weight="600" letter-spacing="2">HV</text>
+</svg>

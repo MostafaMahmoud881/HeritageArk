@@ -1,0 +1,6 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="80" height="80" rx="40" fill="#F8F5F0"/>
+  <circle cx="40" cy="30" r="12" fill="#D4A373" opacity="0.25"/>
+  <path d="M30 44 L34 64 L40 66 L46 64 L50 44" fill="#D4A373" opacity="0.12"/>
+  <text x="40" y="60" text-anchor="middle" fill="#D4A373" font-size="5" font-family="serif" opacity="0.5">Amanitore</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="16" fill="#F8F5F0"/>
+  <circle cx="85" cy="80" r="16" fill="#D4A373" opacity="0.2"/>
+  <path d="M78 100 L85 150 L92 100" fill="#D4A373" opacity="0.12"/>
+  <circle cx="85" cy="80" r="2.5" fill="#D4A373" opacity="0.35"/>
+  <circle cx="120" cy="90" r="12" fill="#D4A373" opacity="0.15"/>
+  <path d="M115 105 L120 145 L125 105" fill="#D4A373" opacity="0.1"/>
+  <path d="M45 60 Q65 35 100 45 Q130 35 155 60" stroke="#D4A373" stroke-width="1.5" fill="none" opacity="0.12"/>
+  <text x="100" y="175" text-anchor="middle" fill="#D4A373" font-size="12" font-family="serif" opacity="0.5">Explore with Friends</text>
+</svg>

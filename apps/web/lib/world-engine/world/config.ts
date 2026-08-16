@@ -1,0 +1,166 @@
+import type { WorldConfig } from './types';
+
+/**
+ * Default HeritageArk world configuration.
+ * Each zone/NPC/artifact links back to existing HeritageArk systems.
+ * No data is duplicated — IDs reference existing APIs.
+ */
+export const DEFAULT_WORLD: WorldConfig = {
+  id: 'heritageverse-world',
+  name: 'HeritageArk World',
+  spawnPosition: { x: 0, y: 0, z: 0 },
+
+  zones: [
+    {
+      id: 'zone-museum',
+      name: 'Digital Museum',
+      culture: 'Global',
+      bounds: { minX: -20, maxX: -5, minZ: -10, maxZ: 10 },
+      trigger: 'museum',
+      triggerPayload: {},
+      emoji: '🏛️',
+      description: 'Walk inside to explore 3D artifacts from ancient civilizations.',
+    },
+    {
+      id: 'zone-nubian',
+      name: 'Nubian Village',
+      culture: 'Nubian',
+      bounds: { minX: 10, maxX: 30, minZ: -15, maxZ: 5 },
+      trigger: 'heritage',
+      triggerPayload: { siteId: 'nubian-village', culture: 'Nubian' },
+      emoji: '🇪🇬',
+      description: 'A reconstructed Nubian village along the Nile.',
+    },
+    {
+      id: 'zone-amazigh',
+      name: 'Atlas Market',
+      culture: 'Amazigh',
+      bounds: { minX: 10, maxX: 30, minZ: 10, maxZ: 30 },
+      trigger: 'heritage',
+      triggerPayload: { siteId: 'amazigh-market', culture: 'Amazigh' },
+      emoji: '🇲🇦',
+      description: 'A bustling Amazigh market in the Atlas Mountains.',
+    },
+    {
+      id: 'zone-mayan',
+      name: 'Mayan Temple',
+      culture: 'Mayan',
+      bounds: { minX: -30, maxX: -10, minZ: 10, maxZ: 30 },
+      trigger: 'heritage',
+      triggerPayload: { siteId: 'mayan-temple', culture: 'Mayan' },
+      emoji: '🇲🇽',
+      description: 'The ancient Mayan temple complex.',
+    },
+  ],
+
+  npcs: [
+    {
+      id: 'ibn-battuta',
+      name: 'Ibn Battuta',
+      culture: 'Medieval Islamic',
+      storytellerId: 'ibn-battuta',
+      aiContext: 'You are Ibn Battuta, the great medieval explorer. Share stories of your travels.',
+      position: { x: 5, y: 0, z: -5 },
+      emoji: '🧭',
+      interactionRadius: 3,
+    },
+    {
+      id: 'nubian-elder',
+      name: 'Nubian Elder',
+      culture: 'Nubian',
+      storytellerId: 'nubian-farmer',
+      aiContext: 'You are a Nubian elder from the Nile Valley. Share wisdom about Nubian culture.',
+      position: { x: 18, y: 0, z: -5 },
+      emoji: '👴🏿',
+      interactionRadius: 3,
+    },
+    {
+      id: 'amazigh-merchant',
+      name: 'Amazigh Merchant',
+      culture: 'Amazigh',
+      storytellerId: 'amazigh-merchant',
+      aiContext: 'You are an Amazigh merchant from the Atlas Mountains. Share knowledge of Amazigh crafts.',
+      position: { x: 18, y: 0, z: 18 },
+      emoji: '🧕',
+      interactionRadius: 3,
+    },
+    {
+      id: 'mayan-scribe',
+      name: 'Mayan Scribe',
+      culture: 'Mayan',
+      aiContext: 'You are a Mayan scribe. Explain Mayan glyphs, calendar, and cosmology.',
+      position: { x: -18, y: 0, z: 18 },
+      emoji: '📜',
+      interactionRadius: 3,
+    },
+  ],
+
+  artifacts: [
+    {
+      id: 'nubian-ankh',
+      name: 'Nubian Ankh Amulet',
+      culture: 'Nubian',
+      hvArtifactId: 'a1',
+      position: { x: 22, y: 0, z: -8 },
+      emoji: '☥',
+      interactionRadius: 2,
+    },
+    {
+      id: 'amazigh-diadem',
+      name: 'Amazigh Silver Diadem',
+      culture: 'Amazigh',
+      hvArtifactId: 'a2',
+      position: { x: 22, y: 0, z: 22 },
+      emoji: '👑',
+      interactionRadius: 2,
+    },
+    {
+      id: 'mayan-mask',
+      name: 'Mayan Jade Burial Mask',
+      culture: 'Mayan',
+      hvArtifactId: 'a3',
+      position: { x: -22, y: 0, z: 22 },
+      emoji: '🟢',
+      interactionRadius: 2,
+    },
+    {
+      id: 'ottoman-tile',
+      name: 'Ottoman Iznik Tile',
+      culture: 'Ottoman',
+      hvArtifactId: 'a4',
+      position: { x: -8, y: 0, z: 8 },
+      emoji: '🔵',
+      interactionRadius: 2,
+    },
+  ],
+
+  heritageSites: [
+    {
+      id: 'nubian-village',
+      name: 'Nubian Village',
+      culture: 'Nubian',
+      cultureSlug: 'nubian',
+      position: { x: 20, y: 0, z: -10 },
+      emoji: '🏘️',
+      interactionRadius: 8,
+    },
+    {
+      id: 'amazigh-market',
+      name: 'Atlas Market',
+      culture: 'Amazigh',
+      cultureSlug: 'amazigh',
+      position: { x: 20, y: 0, z: 20 },
+      emoji: '🏪',
+      interactionRadius: 8,
+    },
+    {
+      id: 'mayan-temple',
+      name: 'Mayan Temple',
+      culture: 'Mayan',
+      cultureSlug: 'mayan',
+      position: { x: -20, y: 0, z: 20 },
+      emoji: '🔺',
+      interactionRadius: 8,
+    },
+  ],
+};

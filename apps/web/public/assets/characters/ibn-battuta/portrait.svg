@@ -1,0 +1,11 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="100" fill="#F8F5F0"/>
+  <circle cx="100" cy="85" r="28" fill="#D4A373" opacity="0.2" stroke="#D4A373" stroke-width="2"/>
+  <path d="M72 113 L80 175 L100 180 L120 175 L128 113" fill="#D4A373" opacity="0.12"/>
+  <circle cx="100" cy="85" r="4" fill="#D4A373" opacity="0.5"/>
+  <path d="M85 83 L95 83 M105 83 L115 83" stroke="#D4A373" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  <path d="M90 90 Q100 98 110 90" stroke="#D4A373" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <path d="M65 75 Q50 60 55 50" stroke="#D4A373" stroke-width="2" stroke-linecap="round" opacity="0.2"/>
+  <path d="M135 75 Q150 60 145 50" stroke="#D4A373" stroke-width="2" stroke-linecap="round" opacity="0.2"/>
+  <text x="100" y="160" text-anchor="middle" fill="#D4A373" font-size="12" font-family="serif" opacity="0.6">Ibn Battuta</text>
+</svg>

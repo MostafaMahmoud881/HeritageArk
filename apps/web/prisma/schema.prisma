@@ -1,0 +1,1029 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id               String   @id @default(cuid())
+  email            String   @unique
+  passwordHash     String
+  name             String
+  role             String   @default("member")
+  avatar           String?
+  bio              String?
+  emailVerified    Boolean  @default(false)
+  verificationToken String?
+  resetToken       String?
+  resetTokenExp    DateTime?
+  oauthProvider    String?
+  oauthId          String?
+  refreshToken     String?
+  twoFactorEnabled Boolean @default(false)
+  twoFactorSecret  String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  lastLogin        DateTime?
+
+  articles      Article[]
+  comments      Comment[]
+  likes         Like[]
+  bookmarks     Bookmark[]
+  notifications Notification[]
+  auditLogs     AuditLog[]
+  mediaItems    MediaItem[]
+  reels         Reel[]
+  reelLikes     ReelLike[]
+  reelComments  ReelComment[]
+  reelSaves     ReelSave[]
+  reelViews     ReelView[]
+  followers     Follow[]      @relation("Followers")
+  following     Follow[]      @relation("Following")
+  searchQueries    SearchQuery[]
+  searchHistory    SearchHistory[]
+  folders          Folder[]
+  collections      Collection[]
+  uploadedFiles    File[]
+  filePermissions  FilePermission[]
+  sitePages     SitePage[]
+  videos        Video[]
+  videoLikes    VideoLike[]
+  videoComments VideoComment[]
+  videoViews    VideoView[]
+  studioActivities StudioActivity[]
+  creditBalance CreditBalance?
+  aiGenerationJobs AIGenerationJob[]
+  promptTemplates  PromptTemplate[]
+}
+
+model Article {
+  id          String   @id @default(cuid())
+  title       String
+  content     String   @db.Text
+  excerpt     String?
+  category    String
+  status      String   @default("draft")
+  authorId    String
+  author      User     @relation(fields: [authorId], references: [id])
+  tags        String[]
+  image       String?
+  scheduledAt DateTime?
+  slug        String   @unique
+  viewCount   Int      @default(0)
+  publishedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  version     Int      @default(1)
+}
+
+model Comment {
+  id        String   @id @default(cuid())
+  text      String   @db.Text
+  authorId  String
+  author    User     @relation(fields: [authorId], references: [id])
+  refId     String
+  refType   String
+  parentId  String?
+  parent    Comment?  @relation("CommentReplies", fields: [parentId], references: [id])
+  replies   Comment[] @relation("CommentReplies")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Like {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  refId     String
+  refType   String
+  createdAt DateTime @default(now())
+
+  @@unique([userId, refId, refType])
+}
+
+model Bookmark {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  refId     String
+  refType   String
+  createdAt DateTime @default(now())
+
+  @@unique([userId, refId, refType])
+}
+
+model MediaItem {
+  id           String   @id @default(cuid())
+  name         String
+  type         String
+  size         Int
+  url          String
+  thumbnailUrl String?
+  blurHash     String?
+  width        Int?
+  height       Int?
+  alt          String?
+  tags         String[]
+  copyright    String   @default("CC BY-SA 4.0")
+  uploadedById String?
+  uploadedBy   User?    @relation(fields: [uploadedById], references: [id])
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  type      String
+  title     String
+  message   String?
+  refId     String?
+  refType   String?
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  action    String
+  entity    String?
+  entityId  String?
+  details   String?  @db.Text
+  ip        String?
+  userAgent String?
+  createdAt DateTime @default(now())
+}
+
+model NewsletterSubscription {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
+
+model Culture {
+  id          String   @id
+  name        String
+  region      String
+  summary     String?  @db.Text
+  description String?  @db.Text
+  flag        String?
+  color       String?
+  articleIds  String[]
+  artifactIds String[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model NewsArticle {
+  id          String   @id
+  title       String
+  summary     String?  @db.Text
+  content     String?  @db.Text
+  category    String?
+  author      String?
+  source      String?
+  sourceUrl   String?
+  image       String?
+  publishedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Event {
+  id          String   @id @default(cuid())
+  title       String
+  description String?  @db.Text
+  type        String
+  date        DateTime
+  location    String?
+  image       String?
+  link        String?
+  createdAt DateTime @default(now())
+}
+
+// ── AI Video Foundation ──
+
+model AIProvider {
+  id              String             @id @default(cuid())
+  name            String             @unique // Runway, Luma, Pika, Kling, Google Veo
+  slug            String             @unique // runway, luma, pika, kling, google-veo
+  description     String?
+  enabled         Boolean            @default(false)
+  isDefault       Boolean            @default(false)
+  
+  // Monthly usage tracking
+  monthlyApiCalls Int                @default(0)
+  monthlyCost     Float              @default(0)
+  estimatedCostPerGen Float          @default(0)
+
+  // Configurable limits
+  monthlyLimit    Int                @default(0) // 0 = unlimited
+  dailyLimit      Int                @default(0)
+
+  // Rate limiting
+  maxConcurrentJobs Int             @default(3)
+  cooldownSeconds   Int             @default(60)
+
+  apiKeys         AIProviderKey[]
+  generationJobs  AIGenerationJob[]
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+}
+
+model AIProviderKey {
+  id          String      @id @default(cuid())
+  providerId  String
+  provider    AIProvider  @relation(fields: [providerId], references: [id], onDelete: Cascade)
+  keyLabel    String      @default("Default")
+  keyValue    String      @db.Text // encrypted or masked
+  isActive    Boolean     @default(true)
+  lastUsedAt  DateTime?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+model CreditBalance {
+  id          String      @id @default(cuid())
+  userId      String      @unique
+  user        User        @relation(fields: [userId], references: [id])
+
+  // Current balance
+  videoCredits      Int   @default(0)
+  imageCredits      Int   @default(0)
+  subtitleCredits   Int   @default(0)
+  translationCredits Int  @default(0)
+  voiceCredits      Int   @default(0)
+
+  // Monthly usage
+  videoCreditsUsed      Int @default(0)
+  imageCreditsUsed      Int @default(0)
+  subtitleCreditsUsed   Int @default(0)
+  translationCreditsUsed Int @default(0)
+  voiceCreditsUsed      Int @default(0)
+
+  // Lifecycle
+  lastResetAt   DateTime?
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  transactions  CreditTransaction[]
+}
+
+model CreditTransaction {
+  id              String        @id @default(cuid())
+  balanceId       String
+  balance         CreditBalance @relation(fields: [balanceId], references: [id], onDelete: Cascade)
+  type            String        // grant, use, refund, expire
+  creditType      String        // video, image, subtitle, translation, voice
+  amount          Int           // positive = grant, negative = use
+  description     String?
+  refId           String?       // reference to generation job, etc
+  createdAt DateTime @default(now())
+}
+
+// ── Site Settings ──
+
+model SiteSetting {
+  id        String   @id @default(cuid())
+
+  // General
+  siteName        String   @default("HeritageVerse")
+  siteDescription String?
+  logoUrl         String?
+  faviconUrl      String?
+
+  // Languages
+  activeLocales   String[] @default(["en", "ar", "fr"])
+
+  // Authentication
+  twoFactorRequired Boolean @default(false)
+  oauthProviders    String[] @default(["google"])
+  registrationMode  String   @default("open") // open | invite | closed
+
+  // Media
+  maxUploadSize         Int      @default(2000) // MB
+  allowedImageFormats   String[] @default(["jpg", "png", "gif", "webp", "tiff", "svg"])
+  allowedDocumentFormats String[] @default(["pdf", "docx", "txt", "csv"])
+  compressionQuality    Int      @default(85)
+
+  // Notifications (JSON map of boolean toggles)
+  notificationSettings String? @db.Text // JSON
+
+  // Email / SMTP
+  smtpHost     String?
+  smtpPort     Int      @default(587)
+  smtpUsername String?
+  smtpPassword String?
+  fromAddress  String?
+
+  // Maintenance
+  maintenanceMode    Boolean @default(false)
+  maintenanceMessage String? @db.Text
+
+  updatedAt DateTime @updatedAt
+}
+
+model AIGenerationJob {
+  id              String      @id @default(cuid())
+  providerId      String?
+  provider        AIProvider? @relation(fields: [providerId], references: [id])
+
+  // Generation type
+  type            String      // text-to-video, image-to-video, story-to-video
+
+  // Input
+  prompt          String      @db.Text
+  negativePrompt  String?     @db.Text
+  imageUrl        String?     // for image-to-video
+  storyText       String?     @db.Text // for story-to-video
+
+  // Configuration
+  duration        Int         @default(5) // seconds
+  aspectRatio     String      @default("16:9")
+  quality         String      @default("standard") // standard, high, ultra
+  style           String?     // preset style
+  language        String      @default("en")
+
+  // Creator
+  creatorId       String
+  creator         User        @relation(fields: [creatorId], references: [id])
+
+  // Status
+  status          String      @default("queued") // queued, processing, completed, failed, cancelled
+  progress        Float       @default(0) // 0-100
+  errorMessage    String?     @db.Text
+
+  // Output
+  outputUrl       String?
+  thumbnailUrl    String?
+  outputMediaId   String?     // reference to MediaItem
+
+  // Metadata
+  providerJobId   String?     // external provider job ID
+  metadata        String?     @db.Text // JSON
+
+  // Cost
+  creditsUsed     Int         @default(0)
+  estimatedCost   Float?
+
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+  completedAt     DateTime?
+
+  history         GenerationHistory?
+}
+
+model PromptTemplate {
+  id          String   @id @default(cuid())
+  name        String
+  description String?  @db.Text
+  prompt      String   @db.Text
+  type        String   @default("text-to-video") // text-to-video, image-to-video, story-to-video
+  style       String?
+  duration    Int      @default(5)
+  aspectRatio String   @default("16:9")
+  quality     String   @default("standard")
+  language    String   @default("en")
+  category    String?  // cultural, historical, educational, promotional
+  isPublic    Boolean  @default(true)
+  creatorId   String
+  creator     User     @relation(fields: [creatorId], references: [id])
+  usageCount  Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model GenerationHistory {
+  id          String           @id @default(cuid())
+  jobId       String           @unique
+  job         AIGenerationJob  @relation(fields: [jobId], references: [id], onDelete: Cascade)
+
+  prompt      String           @db.Text
+  type        String
+  status      String
+  provider    String?
+  duration    Int
+  aspectRatio String
+  quality     String
+  style       String?
+  creditsUsed Int              @default(0)
+
+  createdAt   DateTime         @default(now())
+}
+
+model Reel {
+  id            String   @id @default(cuid())
+  title         String
+  description   String?  @db.Text
+  videoUrl      String
+  thumbnailUrl  String?
+  duration      Int      @default(0)
+  language      String   @default("en")
+  culturalTags  String[]
+  researchRefs  String[]
+  isVerified    Boolean  @default(false)
+  viewCount     Int      @default(0)
+  likeCount     Int      @default(0)
+  commentCount  Int      @default(0)
+  shareCount    Int      @default(0)
+  saveCount     Int      @default(0)
+  status        String   @default("published") // draft, published, archived, flagged
+  creatorId     String
+  creator       User     @relation(fields: [creatorId], references: [id])
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  likes     ReelLike[]
+  comments  ReelComment[]
+  saves     ReelSave[]
+  views     ReelView[]
+  trending  ReelTrending?
+  studio    ReelStudio?
+}
+
+model ReelLike {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  reelId    String
+  reel      Reel     @relation(fields: [reelId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, reelId])
+}
+
+model ReelComment {
+  id        String        @id @default(cuid())
+  text      String        @db.Text
+  language  String        @default("en")
+  userId    String
+  user      User          @relation(fields: [userId], references: [id])
+  reelId    String
+  reel      Reel          @relation(fields: [reelId], references: [id], onDelete: Cascade)
+  parentId  String?
+  parent    ReelComment?  @relation("ReelCommentReplies", fields: [parentId], references: [id])
+  replies   ReelComment[] @relation("ReelCommentReplies")
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+}
+
+model ReelSave {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  reelId    String
+  reel      Reel     @relation(fields: [reelId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, reelId])
+}
+
+model ReelView {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  reelId    String
+  reel      Reel     @relation(fields: [reelId], references: [id], onDelete: Cascade)
+  watchDuration Int  @default(0)
+  completed Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, reelId])
+}
+
+model Follow {
+  id          String   @id @default(cuid())
+  followerId  String
+  follower    User     @relation("Following", fields: [followerId], references: [id])
+  followingId String
+  following   User     @relation("Followers", fields: [followingId], references: [id])
+  createdAt   DateTime @default(now())
+
+  @@unique([followerId, followingId])
+}
+
+model ReelTrending {
+  id        String   @id @default(cuid())
+  reelId    String   @unique
+  reel      Reel     @relation(fields: [reelId], references: [id], onDelete: Cascade)
+  score     Float    @default(0)
+  period    String   @default("daily") // daily, weekly, monthly
+  calculatedAt DateTime @default(now())
+}
+
+// ── Global Search System ──
+
+model SearchQuery {
+  id        String   @id @default(cuid())
+  query     String
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  filters   String?  @db.Text
+  results   Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model TrendingSearch {
+  id        String   @id @default(cuid())
+  query     String   @unique
+  count     Int      @default(1)
+  language  String   @default("all")
+  country   String?
+  culture   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SearchHistory {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  query     String
+  filters   String?
+  createdAt DateTime @default(now())
+
+  @@unique([userId, query])
+}
+
+// ── Multilingual Dictionaries ──
+
+model DictionaryEntry {
+  id          String   @id @default(cuid())
+  word        String
+  language    String   // ar, en, fr
+  partOfSpeech String? // noun, verb, adjective, etc.
+  definition  String?  @db.Text
+  pronunciation String? // IPA pronunciation
+  audioUrl    String?
+  culturalNote String?  @db.Text
+  category    String?  // general, heritage, cultural, terminology
+  tags        String[]
+  etymology   String?
+  difficulty  String   @default("beginner") // beginner, intermediate, advanced
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  translations DictionaryTranslation[] @relation("SourceEntries")
+  translatedBy DictionaryTranslation[] @relation("TargetEntries")
+  examples     ExampleSentence[]
+  synonyms     DictionaryRelation[]    @relation("SynonymEntries")
+  antonyms     DictionaryRelation[]    @relation("AntonymEntries")
+
+  @@unique([word, language])
+}
+
+model DictionaryTranslation {
+  id          String          @id @default(cuid())
+  sourceId    String
+  source      DictionaryEntry @relation("SourceEntries", fields: [sourceId], references: [id])
+  targetId    String
+  target      DictionaryEntry @relation("TargetEntries", fields: [targetId], references: [id])
+  confidence  Float           @default(1.0)
+  notes       String?
+  createdAt   DateTime        @default(now())
+
+  @@unique([sourceId, targetId])
+}
+
+model ExampleSentence {
+  id        String          @id @default(cuid())
+  entryId   String
+  entry     DictionaryEntry @relation(fields: [entryId], references: [id], onDelete: Cascade)
+  sentence  String          @db.Text
+  translation String?       @db.Text
+  language  String
+  source    String?         // literary, common, formal
+  createdAt DateTime        @default(now())
+}
+
+model DictionaryRelation {
+  id         String          @id @default(cuid())
+  entryId    String
+  entry      DictionaryEntry @relation("SynonymEntries", fields: [entryId], references: [id], onDelete: Cascade)
+  relatedId  String
+  related    DictionaryEntry @relation("AntonymEntries", fields: [relatedId], references: [id], onDelete: Cascade)
+  type       String          // synonym, antonym, related
+  createdAt  DateTime        @default(now())
+
+  @@unique([entryId, relatedId, type])
+}
+
+// ── File Upload System ──
+
+model Folder {
+  id          String     @id @default(cuid())
+  name        String
+  description String?
+  parentId    String?
+  parent      Folder?    @relation("FolderHierarchy", fields: [parentId], references: [id])
+  children    Folder[]   @relation("FolderHierarchy")
+  files       File[]
+  ownerId     String
+  owner       User       @relation(fields: [ownerId], references: [id])
+  isShared    Boolean    @default(false)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+}
+
+model Collection {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  ownerId     String
+  owner       User     @relation(fields: [ownerId], references: [id])
+  files       File[]
+  isPublic    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model File {
+  id              String         @id @default(cuid())
+  name            String
+  originalName    String
+  type            String         // image, video, audio, pdf, document, presentation, archive, dataset
+  mimeType        String
+  size            Int
+  url             String
+  thumbnailUrl    String?
+  blurHash        String?
+  width           Int?
+  height          Int?
+  duration        Int?           // for audio/video
+  pages           Int?           // for PDFs
+  folderId        String?
+  folder          Folder?        @relation(fields: [folderId], references: [id])
+  collectionId    String?
+  collection      Collection?    @relation(fields: [collectionId], references: [id])
+  uploadedById    String
+  uploadedBy      User           @relation(fields: [uploadedById], references: [id])
+  metadata        String?        @db.Text // JSON metadata
+  checksum        String?        // SHA-256 for integrity
+  virusScanStatus String         @default("pending") // pending, clean, infected
+  permissions     FilePermission[]
+  tags            String[]
+  alt             String?
+  copyright       String         @default("CC BY-SA 4.0")
+  status          String         @default("active") // active, archived, deleted
+  uploadProgress  Float          @default(100) // 0-100
+  resumedFrom     String?        // upload ID for resume
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+}
+
+model FilePermission {
+  id        String @id @default(cuid())
+  fileId    String
+  file      File   @relation(fields: [fileId], references: [id], onDelete: Cascade)
+  userId    String?
+  user      User?  @relation(fields: [userId], references: [id])
+  role      String? // super_admin, admin, editor, researcher
+  permission String // view, edit, delete, share
+  createdAt DateTime @default(now())
+
+  @@unique([fileId, userId, permission])
+  @@unique([fileId, role, permission])
+}
+
+// ── Website Management Studio ──
+
+model SiteTheme {
+  id          String   @id @default(cuid())
+  name        String   @default("Default")
+  isActive    Boolean  @default(false)
+  isSystem    Boolean  @default(false)
+
+  // Colors
+  primaryColor      String @default("#0B132B")
+  secondaryColor    String @default("#1C2541")
+  accentColor       String @default("#D4A373")
+  goldColor         String @default("#E9C46A")
+  bgColor           String @default("#F8F5F0")
+  textColor         String @default("#0B132B")
+  mutedColor        String @default("#6B7280")
+  borderColor       String @default("#E8E2D9")
+  successColor      String @default("#059669")
+  dangerColor       String @default("#DC2626")
+  infoColor         String @default("#2563EB")
+  warningColor      String @default("#D97706")
+  whiteColor        String @default("#FFFFFF")
+
+  // Typography
+  headingFont    String @default("Playfair Display")
+  bodyFont       String @default("Inter")
+  baseFontSize   String @default("16px")
+  headingWeight  String @default("700")
+
+  // Spacing & Layout
+  spacing        String @default("4px")
+  borderRadius   String @default("12px")
+  containerWidth String @default("1280px")
+
+  // Custom CSS
+  customCss      String? @db.Text
+
+  // Animations
+  animationSpeed String @default("300ms")
+
+  // Shadows
+  cardShadow     String @default("0 4px 20px rgba(0,0,0,0.08)")
+  accentGlow     String @default("0 0 20px rgba(212,163,115,0.3)")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Branding {
+  id             String   @id @default(cuid())
+  logoUrl        String?
+  logoDarkUrl    String?
+  faviconUrl     String?
+  appIconUrl     String?
+  splashScreenUrl String?
+  watermarkUrl   String?
+
+  // Social Sharing
+  ogImageUrl     String?
+  ogTitle        String?
+  ogDescription  String?
+  twitterHandle  String?
+
+  // SEO Defaults
+  metaTitle       String?
+  metaDescription String?
+  metaKeywords    String?
+
+  siteName        String   @default("HeritageVerse")
+  tagline         String?
+
+  updatedAt DateTime @updatedAt
+}
+
+model NavMenu {
+  id        String       @id @default(cuid())
+  name      String       @unique
+  slug      String       @unique
+  location  String       @default("header") // header, footer, sidebar, mobile
+  items     NavMenuItem[]
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+}
+
+model NavMenuItem {
+  id          String      @id @default(cuid())
+  menuId      String
+  menu        NavMenu     @relation(fields: [menuId], references: [id], onDelete: Cascade)
+  parentId    String?
+  parent      NavMenuItem? @relation("NavMenuItemParent", fields: [parentId], references: [id])
+  children    NavMenuItem[] @relation("NavMenuItemParent")
+  label       String
+  url         String?
+  icon        String?
+  target      String      @default("_self") // _self, _blank
+  type        String      @default("link") // link, dropdown, mega_menu, divider
+  order       Int         @default(0)
+  isActive    Boolean     @default(true)
+  cssClass    String?
+  megaMenuColumns Int    @default(4)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+model SitePage {
+  id          String        @id @default(cuid())
+  title       String
+  slug        String        @unique
+  description String?
+  layout      String        @default("default") // default, full-width, sidebar-left, sidebar-right
+  status      String        @default("draft") // draft, published, archived
+  authorId    String
+  author      User          @relation(fields: [authorId], references: [id])
+  sections    PageSection[]
+  versions    PageVersion[]
+  publishedAt DateTime?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
+model PageSection {
+  id          String       @id @default(cuid())
+  pageId      String
+  page        SitePage     @relation(fields: [pageId], references: [id], onDelete: Cascade)
+  type        String       // hero, text, image, gallery, video, cta, features, cards, testimonial, contact, custom
+  title       String?
+  content     String?      @db.Text // JSON blocks
+  settings    String?      @db.Text // JSON settings (background, padding, etc.)
+  order       Int          @default(0)
+  isVisible   Boolean      @default(true)
+  cssClass    String?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+}
+
+model PageVersion {
+  id        String    @id @default(cuid())
+  pageId    String
+  page      SitePage  @relation(fields: [pageId], references: [id], onDelete: Cascade)
+  version   Int       @default(1)
+  data      String    @db.Text // JSON snapshot of all sections
+  authorId  String?
+  notes     String?
+  createdAt DateTime  @default(now())
+
+  @@unique([pageId, version])
+}
+
+model HomepageLayout {
+  id        String   @id @default(cuid())
+  sections  String   @db.Text // JSON array of section IDs/order
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ── Video Creator Studio ──
+
+model Video {
+  id            String   @id @default(cuid())
+  title         String
+  description   String?  @db.Text
+  videoUrl      String
+  thumbnailUrl  String?
+  duration      Int      @default(0)
+  fileSize      Int?
+  mimeType      String?
+
+  // Status & Scheduling
+  status        String   @default("draft") // draft, scheduled, published, private, unlisted
+  scheduledAt   DateTime?
+
+  // Metadata
+  tags          String[]
+  language      String   @default("en")
+  category      String?
+  license       String   @default("CC BY-SA 4.0")
+  allowComments Boolean  @default(true)
+  allowDownloads Boolean @default(true)
+
+  // Subtitles & Translations
+  subtitlesUrl  String?
+  subtitles     String?  @db.Text // JSON array of subtitle tracks
+  translations  String?  @db.Text // JSON object of translated metadata
+
+  // Creator
+  creatorId     String
+  creator       User     @relation(fields: [creatorId], references: [id])
+
+  // Stats
+  viewCount     Int      @default(0)
+  likeCount     Int      @default(0)
+  commentCount  Int      @default(0)
+  shareCount    Int      @default(0)
+  saveCount     Int      @default(0)
+  followersGained Int    @default(0)
+  watchTime     Int      @default(0) // total seconds
+  avgWatchTime  Float    @default(0)
+  ctr           Float    @default(0) // click-through rate
+
+  // Audience
+  audienceAge   String?  @db.Text // JSON
+  audienceGender String? @db.Text // JSON
+  audienceGeo   String?  @db.Text // JSON
+  trafficSources String? @db.Text // JSON
+  deviceTypes   String?  @db.Text // JSON
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  likes     VideoLike[]
+  comments  VideoComment[]
+  views     VideoView[]
+}
+
+model VideoLike {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  videoId   String
+  video     Video    @relation(fields: [videoId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, videoId])
+}
+
+model VideoComment {
+  id        String         @id @default(cuid())
+  text      String         @db.Text
+  userId    String
+  user      User           @relation(fields: [userId], references: [id])
+  videoId   String
+  video     Video          @relation(fields: [videoId], references: [id], onDelete: Cascade)
+  parentId  String?
+  parent    VideoComment?  @relation("VideoCommentReplies", fields: [parentId], references: [id])
+  replies   VideoComment[] @relation("VideoCommentReplies")
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+}
+
+model VideoView {
+  id            String   @id @default(cuid())
+  userId        String?
+  user          User?    @relation(fields: [userId], references: [id])
+  videoId       String
+  video         Video    @relation(fields: [videoId], references: [id], onDelete: Cascade)
+  watchDuration Int      @default(0)
+  completed     Boolean  @default(false)
+  ip            String?
+  userAgent     String?
+  referrer      String?
+  createdAt     DateTime @default(now())
+}
+
+// ── Reels Creator Studio (extended) ──
+
+model ReelStudio {
+  id            String   @id @default(cuid())
+  reelId        String   @unique
+  reel          Reel     @relation(fields: [reelId], references: [id], onDelete: Cascade)
+
+  // Publishing
+  status        String   @default("draft") // draft, scheduled, published, private, unlisted
+  scheduledAt   DateTime?
+
+  // Thumbnails
+  customThumbnailUrl String?
+
+  // Subtitles
+  autoSubtitleGenerated Boolean @default(false)
+  subtitleUrl    String?
+  subtitleTracks String?  @db.Text // JSON
+
+  // Hashtags
+  hashtags      String[]
+
+  // Trending Audio
+  trendingAudioId String?
+  trendingAudio   String? // name of trending audio track
+
+  // Analytics
+  avgWatchTime   Float   @default(0)
+  completionRate Float   @default(0) // percentage
+  ctr            Float   @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ── DB-backed Permissions (extend the hardcoded system) ──
+
+model Permission {
+  id          String            @id @default(cuid())
+  name        String            @unique // e.g. "content.create"
+  label       String            // e.g. "Create Content"
+  group       String            // e.g. "Content", "Media", "Users", "Settings"
+  description String?
+  createdAt   DateTime          @default(now())
+  rolePermissions RolePermission[]
+}
+
+model Role {
+  id          String            @id @default(cuid())
+  name        String            @unique // e.g. "super_admin", "admin"
+  label       String            // e.g. "Super Admin"
+  level       Int               @default(0) // hierarchy level
+  isSystem    Boolean           @default(false)
+  description String?
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+  rolePermissions RolePermission[]
+}
+
+model RolePermission {
+  id           String     @id @default(cuid())
+  roleId       String
+  role         Role       @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  permissionId String
+  permission   Permission @relation(fields: [permissionId], references: [id], onDelete: Cascade)
+  createdAt    DateTime   @default(now())
+
+  @@unique([roleId, permissionId])
+}
+
+// ── Activity Log for Studio ──
+
+model StudioActivity {
+  id        String   @id @default(cuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  action    String   // create, update, delete, publish, upload, etc.
+  entity    String   // page, theme, branding, menu, video, reel, media
+  entityId  String?
+  details   String?  @db.Text // JSON
+  createdAt DateTime @default(now())
+}

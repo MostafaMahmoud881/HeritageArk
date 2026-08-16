@@ -1,0 +1,17 @@
+:root {
+  --ha-green-600: #355C4A;
+  --ha-sand-200: #E8DDC8;
+  --ha-stone-300: #DCCFB8;
+  --ha-ivory-50: #F7F4EF;
+  --ha-slate-600: #59636D;
+  --ha-charcoal-900: #2D3436;
+  --ha-gold-500: #B9955A;
+  --ha-bronze-600: #8C6B43;
+  --ha-surface: var(--ha-ivory-50);
+  --ha-ink: var(--ha-charcoal-900);
+  --ha-focus: #6F927F;
+  --ha-space-unit: 4px;
+  --ha-radius-control: 10px;
+  --ha-radius-panel: 18px;
+  --ha-shadow-soft: 0 18px 50px rgb(45 52 54 / 0.10);
+}

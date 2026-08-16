@@ -1,0 +1,16 @@
+{
+  "reels": {
+    "title": "Reels",
+    "subtitle": "Short heritage videos capturing cultural moments.",
+    "trending": "Trending Reels",
+    "latest": "Latest Reels",
+    "forYou": "For You",
+    "createReel": "Create Reel",
+    "browse": "Browse Reels",
+    "like": "Like",
+    "comment": "Comment",
+    "share": "Share",
+    "save": "Save",
+    "views": "views"
+  }
+}

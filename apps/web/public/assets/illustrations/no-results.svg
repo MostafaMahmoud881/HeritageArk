@@ -1,0 +1,8 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="16" fill="#F8F5F0"/>
+  <circle cx="85" cy="85" r="30" fill="none" stroke="#D4A373" stroke-width="3" opacity="0.5"/>
+  <line x1="107" y1="107" x2="125" y2="125" stroke="#D4A373" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <line x1="65" y1="85" x2="105" y2="85" stroke="#D4A373" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+  <line x1="85" y1="65" x2="85" y2="105" stroke="#D4A373" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+  <text x="100" y="150" text-anchor="middle" fill="#D4A373" font-size="14" font-family="serif" opacity="0.6">No Results</text>
+</svg>

@@ -1,0 +1,25 @@
+{
+  "chat": {
+    "title": "ⴰⵎⵙⴰⵡⴰⵍ ⵙ AI ⵏ ⵜⵓⵜⵍⴰⵢⵉⵏ ⵜⵉⵎⴰⵣⵉⵖⵉⵏ",
+    "subtitle": "ⵍⵎⴷ ⵜⵓⵜⵍⴰⵢⵉⵏ ⵙ ⵓⵎⵙⴰⵡⴰⵍ ⵙ AI",
+    "placeholder": "ⴰⵔⴰ ⵜⵓⵏⵏⵉⵜ...",
+    "send": "ⴰⵣⵏ",
+    "voiceInput": "ⴰⴷⵔⴰⵙ ⵓⵜⵔⵉⵎ",
+    "voiceOutput": "ⴰⴼⴰⵔⵙ ⵓⵜⵔⵉⵎ",
+    "stopRecording": "ⴱⴱⵓⴷ ⴰⵙⵓⴳⵔ",
+    "startRecording": "ⵙⵏⵓ ⴰⵙⵓⴳⵔ",
+    "selectLanguage": "ⴼⵔⵓ ⵜⵓⵜⵍⴰⵢⵜ",
+    "selectDialect": "ⴼⵔⵓ ⴰⵏⴰⵡ",
+    "translation": "ⴰⵙⵓⵖⵍ",
+    "pronunciation": "ⴰⵏⵜⴰⵍ",
+    "learningMode": "ⴰⵏⵎⴰⵍ ⵏ ⵜⵍⵎⵉⴷⵜ",
+    "conversationMode": "ⴰⵏⵎⴰⵍ ⵏ ⵓⵎⵙⴰⵡⴰⵍ",
+    "culturalContext": "ⴰⵏⴳⵔⴰⵡ ⴰⵏⴰⵎⵓⵏ",
+    "clearHistory": "ⵙⵉⴷ ⴰⵎⵣⵔⵓⵢ",
+    "history": "ⴰⵎⵣⵔⵓⵢ ⵏ ⵓⵎⵙⴰⵡⴰⵍ",
+    "speakNow": "ⵙⵙⵓⵔⵉ ⵜⵓⵔⴰ...",
+    "listening": "ⴰⵍⴰⴷ...",
+    "processing": "ⴰⵙⵡⵉⵔⵉ...",
+    "error": "ⵜⴰⵣⵣⵍⴰ ⵜⴻⵜⵜⵓⵊⵕⴰ. ⵙⵓⵔ ⴷⴰⵖⵏ."
+  }
+}

@@ -1,0 +1,10 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="100" fill="#F8F5F0"/>
+  <circle cx="100" cy="80" r="24" fill="#D4A373" opacity="0.2" stroke="#D4A373" stroke-width="2"/>
+  <path d="M78 105 L82 165 L100 170 L118 165 L122 105" fill="#D4A373" opacity="0.12"/>
+  <circle cx="93" cy="78" r="2.5" fill="#D4A373" opacity="0.5"/>
+  <circle cx="107" cy="78" r="2.5" fill="#D4A373" opacity="0.5"/>
+  <path d="M88 85 Q100 95 112 85" stroke="#D4A373" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <path d="M100 80 L100 83" stroke="#D4A373" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+  <text x="100" y="158" text-anchor="middle" fill="#D4A373" font-size="12" font-family="serif" opacity="0.6">Neferu</text>
+</svg>

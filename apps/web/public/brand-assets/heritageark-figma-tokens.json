@@ -1,0 +1,35 @@
+{
+  "heritageark": {
+    "color": {
+      "heritage-green": { "$type": "color", "$value": "#355C4A" },
+      "warm-sand": { "$type": "color", "$value": "#E8DDC8" },
+      "stone-beige": { "$type": "color", "$value": "#DCCFB8" },
+      "ivory": { "$type": "color", "$value": "#F7F4EF" },
+      "slate-gray": { "$type": "color", "$value": "#59636D" },
+      "dark-charcoal": { "$type": "color", "$value": "#2D3436" },
+      "soft-gold": { "$type": "color", "$value": "#B9955A" },
+      "ancient-bronze": { "$type": "color", "$value": "#8C6B43" }
+    },
+    "spacing": {
+      "1": { "$type": "dimension", "$value": "4px" },
+      "2": { "$type": "dimension", "$value": "8px" },
+      "3": { "$type": "dimension", "$value": "12px" },
+      "4": { "$type": "dimension", "$value": "16px" },
+      "6": { "$type": "dimension", "$value": "24px" },
+      "8": { "$type": "dimension", "$value": "32px" },
+      "12": { "$type": "dimension", "$value": "48px" },
+      "16": { "$type": "dimension", "$value": "64px" },
+      "24": { "$type": "dimension", "$value": "96px" }
+    },
+    "radius": {
+      "control": { "$type": "dimension", "$value": "10px" },
+      "panel": { "$type": "dimension", "$value": "18px" },
+      "app-icon": { "$type": "dimension", "$value": "24%" }
+    },
+    "motion": {
+      "control": { "$type": "duration", "$value": "240ms" },
+      "reveal": { "$type": "duration", "$value": "600ms" },
+      "spatial": { "$type": "duration", "$value": "1200ms" }
+    }
+  }
+}

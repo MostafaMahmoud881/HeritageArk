@@ -1,0 +1,12 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="100" fill="#F8F5F0"/>
+  <circle cx="100" cy="82" r="26" fill="#D4A373" opacity="0.2" stroke="#D4A373" stroke-width="2"/>
+  <path d="M72 110 L80 172 L100 178 L120 172 L128 110" fill="#D4A373" opacity="0.12"/>
+  <path d="M66 100 L76 128 L82 124 L74 96" fill="#D4A373" opacity="0.08"/>
+  <path d="M134 100 L124 128 L118 124 L126 96" fill="#D4A373" opacity="0.08"/>
+  <circle cx="100" cy="82" r="3" fill="#D4A373" opacity="0.5"/>
+  <path d="M84 80 L94 80 M106 80 L116 80" stroke="#D4A373" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  <path d="M88 86 Q100 92 112 86" stroke="#D4A373" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <path d="M74 60 L126 60 L122 52 L78 52 Z" fill="#D4A373" opacity="0.1"/>
+  <text x="100" y="160" text-anchor="middle" fill="#D4A373" font-size="12" font-family="serif" opacity="0.6">Marcus</text>
+</svg>

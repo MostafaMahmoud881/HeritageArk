@@ -1,0 +1,10 @@
+{
+  "museum": {
+    "title": "Digital Museum",
+    "subtitle": "Handle ancient artifacts up close with 3D scans and curated expert commentary.",
+    "explore": "Explore",
+    "discover": "Discover",
+    "previewDescription": "Explore artifacts in 3D — rotate, zoom, and uncover the stories behind heritage objects.",
+    "enter": "Enter Museum"
+  }
+}

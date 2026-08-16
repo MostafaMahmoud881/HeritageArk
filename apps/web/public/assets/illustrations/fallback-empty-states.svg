@@ -1,0 +1,7 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="16" fill="#F8F5F0"/>
+  <circle cx="100" cy="90" r="30" fill="#D4A373" opacity="0.15"/>
+  <line x1="100" y1="75" x2="100" y2="105" stroke="#D4A373" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  <line x1="85" y1="90" x2="115" y2="90" stroke="#D4A373" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  <text x="100" y="150" text-anchor="middle" fill="#D4A373" font-size="14" font-family="serif" opacity="0.5">Offline Content</text>
+</svg>

@@ -1,0 +1,25 @@
+{
+  "chat": {
+    "title": "Indigenous Language AI Chat",
+    "subtitle": "Practice endangered languages through conversation with AI.",
+    "placeholder": "Type a message...",
+    "send": "Send",
+    "voiceInput": "Voice Input",
+    "voiceOutput": "Voice Output",
+    "stopRecording": "Stop Recording",
+    "startRecording": "Start Recording",
+    "selectLanguage": "Select Language",
+    "selectDialect": "Select Dialect",
+    "translation": "Translation",
+    "pronunciation": "Pronunciation",
+    "learningMode": "Learning Mode",
+    "conversationMode": "Conversation Mode",
+    "culturalContext": "Cultural Context",
+    "clearHistory": "Clear History",
+    "history": "Conversation History",
+    "speakNow": "Speak now...",
+    "listening": "Listening...",
+    "processing": "Processing...",
+    "error": "An error occurred. Please try again."
+  }
+}

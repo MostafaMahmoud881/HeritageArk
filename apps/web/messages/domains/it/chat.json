@@ -1,0 +1,25 @@
+{
+  "chat": {
+    "title": "Chat AI per lingue indigene",
+    "subtitle": "Pratica le lingue in pericolo attraverso la conversazione con l'AI.",
+    "placeholder": "Scrivi un messaggio...",
+    "send": "Invia",
+    "voiceInput": "Input vocale",
+    "voiceOutput": "Output vocale",
+    "stopRecording": "Ferma registrazione",
+    "startRecording": "Avvia registrazione",
+    "selectLanguage": "Seleziona lingua",
+    "selectDialect": "Seleziona dialetto",
+    "translation": "Traduzione",
+    "pronunciation": "Pronuncia",
+    "learningMode": "Modalità apprendimento",
+    "conversationMode": "Modalità conversazione",
+    "culturalContext": "Contesto culturale",
+    "clearHistory": "Cancella cronologia",
+    "history": "Cronologia conversazioni",
+    "speakNow": "Parla ora...",
+    "listening": "Ascolto...",
+    "processing": "Elaborazione...",
+    "error": "Si è verificato un errore. Riprova."
+  }
+}

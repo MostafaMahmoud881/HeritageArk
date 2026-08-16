@@ -1,0 +1,24 @@
+{
+  "stories": {
+    "title": "Histoires culturelles",
+    "subtitle": "Traditions orales transmises de génération en génération — chaque récit est un acte de préservation.",
+    "listen": "Écouter",
+    "pageTitle": "Conteur",
+    "pageSubtitle": "Découvrez le riche patrimoine de l'Afrique et du Moyen-Orient à travers les yeux de nos conteurs.",
+    "complete": "Histoire terminée !",
+    "finished": "Vous avez terminé",
+    "possesive": " ",
+    "story": "histoire",
+    "pointsEarned": "Points gagnés",
+    "perfectScore": "Score parfait !",
+    "greatJob": "Bon travail !",
+    "keepExploring": "Continuez à explorer !",
+    "back": "Retour aux histoires",
+    "points": "Points",
+    "narrating": "Narration en cours",
+    "you": "Vous",
+    "answerWas": "La réponse était",
+    "whatNext": "Que se passe-t-il ensuite ?",
+    "listening": "Écoute..."
+  }
+}

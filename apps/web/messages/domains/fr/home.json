@@ -1,0 +1,167 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "documentaries": "Documentaires",
+    "museum": "Musée",
+    "map": "Carte du patrimoine",
+    "languages": "Langues",
+    "news": "Actualités",
+    "cultures": "Cultures",
+    "crafts": "Artisanat",
+    "fashion": "Mode",
+    "timeline": "Chronologie",
+    "expeditions": "Expéditions",
+    "reels": "Reels",
+    "stories": "Histoires",
+    "more": "Plus",
+    "explore": "Explorer",
+    "chat": "Chat IA",
+    "tours": "Visites",
+    "newsIntelligence": "Veille d'actualités",
+    "research": "Recherche",
+    "education": "Éducation",
+    "citation": "Citation",
+    "about": "À propos",
+    "admin": "Admin",
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "logout": "Déconnexion",
+    "profile": "Profil",
+    "settings": "Paramètres",
+    "dictionary": "Dictionnaire",
+    "upload": "Téléverser"
+  },
+  "hero": {
+    "title1": "Préserver.",
+    "title2": "Explorer.",
+    "title3": "Ranimer.",
+    "subtitle": "Voyage à travers le patrimoine culturel mondial — des civilisations anciennes aux traditions vivantes.",
+    "cta": "Commencer l'exploration",
+    "watch": "Regarder le documentaire",
+    "cultures": "Cultures",
+    "artifacts": "Artéfacts",
+    "documentaries": "Documentaires",
+    "explore": "Explorer",
+    "quickReels": "Reels",
+    "quickMuseum": "Musée virtuel",
+    "quickChat": "Chat IA",
+    "quickGlobe": "Globe du patrimoine",
+    "quickStories": "Histoires pour enfants",
+    "quickQuests": "Quêtes",
+    "statCultures": "8 cultures",
+    "statArtifacts": "200+ artéfacts",
+    "statDocumentaries": "15 documentaires"
+  },
+  "globe": {
+    "description": "Cliquez sur un marqueur pour découvrir les cultures, les langues, les musées et les sites patrimoniaux"
+  },
+  "cultures": {
+    "title": "Cultures en vedette",
+    "subtitle": "Découvrez la riche tapisserie de la civilisation humaine à travers notre collection organisée de cultures.",
+    "explore": "Explorer",
+    "viewAll": "Voir tout",
+    "about": "À propos",
+    "traditions": "Traditions",
+    "artifacts": "Artéfacts",
+    "timeline": "Chronologie",
+    "region": "Région",
+    "noArtifacts": "Aucun artéfact pour l'instant."
+  },
+  "documentaries": {
+    "title": "Documentaires sur le patrimoine",
+    "subtitle": "Voyage à travers les traditions vivantes et l'artisanat ancien capturés sur pellicule.",
+    "watch": "Regarder",
+    "views": "vues"
+  },
+  "map": {
+    "title": "Patrimoine culturel dans le monde",
+    "subtitle": "Découvrez les sites patrimoniaux, les communautés et les monuments culturels à travers le monde."
+  },
+  "languages": {
+    "title": "Langues menacées",
+    "subtitle": "Toutes les deux semaines, une langue meurt. Aidez à garder ces voix vivantes.",
+    "learn": "Apprendre",
+    "speakers": "locuteurs",
+    "status": "Statut",
+    "family": "Famille",
+    "hello": "Bonjour",
+    "beginner": "Débutant",
+    "intermediate": "Intermédiaire",
+    "advanced": "Avancé"
+  },
+  "fashion": {
+    "title": "Mode patrimoniale",
+    "subtitle": "Vêtements qui portent des siècles d'identité, de savoir-faire et de sens.",
+    "wear": "Porter"
+  },
+  "crafts": {
+    "title": "Marché artisanal",
+    "subtitle": "Chaque achat soutient un maître artisan et maintient une tradition vivante.",
+    "shop": "Acheter",
+    "fairTrade": "Commerce équitable",
+    "by": "par"
+  },
+  "timeline": {
+    "title": "Chronologie culturelle",
+    "subtitle": "Moments clés qui ont façonné notre patrimoine humain commun.",
+    "history": "Histoire"
+  },
+  "expeditions": {
+    "title": "Expéditions actives",
+    "subtitle": "Soutenez des missions de recherche réelles qui documentent le patrimoine avant qu'il ne soit perdu.",
+    "fieldwork": "Travail de terrain",
+    "lead": "Responsable",
+    "progress": "Progrès",
+    "active": "Actif",
+    "planning": "Planification",
+    "completed": "Terminé"
+  },
+  "emergency": {
+    "title": "Tableau de bord d'urgence du patrimoine",
+    "subtitle": "Alertes en temps réel des équipes de préservation du patrimoine sur le terrain dans le monde entier.",
+    "urgent": "Urgent",
+    "critical": "Critique",
+    "high": "Élevé",
+    "medium": "Moyen"
+  },
+  "news": {
+    "title": "Actualités du patrimoine",
+    "subtitle": "Actualités du patrimoine et de l'archéologie provenant de musées, universités et institutions culturelles du monde entier.",
+    "stayInformed": "Restez informé",
+    "allNews": "Toutes les actualités",
+    "backToNews": "Retour aux actualités",
+    "search": "Rechercher des actualités...",
+    "loadMore": "Charger plus",
+    "loading": "Chargement..."
+  },
+  "art": {
+    "title": "Art pour la préservation",
+    "subtitle": "Art en édition limitée où chaque achat finance une mission patrimoniale.",
+    "support": "Soutenir",
+    "raised": "collectés",
+    "goal": "objectif",
+    "backers": "contributeurs"
+  },
+  "newsletter": {
+    "title": "Rejoignez notre newsletter",
+    "subtitle": "Recevez chaque semaine des actualités sur le patrimoine, les cultures en vedette et les sorties exclusives de documentaires.",
+    "placeholder": "votre@email.com",
+    "subscribe": "S'abonner",
+    "success": "Merci de vous être abonné !",
+    "error": "Une erreur s'est produite. Veuillez réessayer."
+  },
+  "footer": {
+    "tagline": "Préserver et partager le patrimoine culturel mondial grâce à une narration immersive.",
+    "explore": "Explorer",
+    "resources": "Ressources",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "attribution": "Attribution des images",
+    "about": "À propos",
+    "contact": "Contact",
+    "research": "Recherche",
+    "copyright": "Tous droits réservés.",
+    "motto": "Préserver. Explorer. Ranimer."
+  }
+}

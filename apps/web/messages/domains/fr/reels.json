@@ -1,0 +1,16 @@
+{
+  "reels": {
+    "title": "Reels",
+    "subtitle": "Vidéos courtes sur le patrimoine culturel.",
+    "trending": "Tendances",
+    "latest": "Récent",
+    "forYou": "Pour vous",
+    "createReel": "Créer un reel",
+    "browse": "Parcourir les reels",
+    "like": "J'aime",
+    "comment": "Commenter",
+    "share": "Partager",
+    "save": "Sauvegarder",
+    "views": "vues"
+  }
+}

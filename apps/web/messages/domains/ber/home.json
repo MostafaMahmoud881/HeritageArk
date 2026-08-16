@@ -1,0 +1,167 @@
+{
+  "nav": {
+    "home": "ⵜⴰⴳⴰⵏⵜ",
+    "documentaries": "ⴰⵎⵣⵓⵏⵏ",
+    "museum": "ⴰⵏⵣⵉ ⵏ ⵉⵙⴽⵯⴼⴰⵔ",
+    "map": "ⵜⴰⴽⴰⵔⵜⵉⵜ",
+    "languages": "ⵜⵓⵜⵍⴰⵢⵉⵏ",
+    "news": "ⵉⵏⵖⵎⵉⵙⵏ",
+    "cultures": "ⵜⵓⵙⵙⵏⴰ",
+    "crafts": "ⵜⵉⵡⵓⵔⵉⵡⵉⵏ",
+    "fashion": "ⴰⵎⴰⵍⴰ",
+    "timeline": "ⴰⵣⵎⵣ",
+    "expeditions": "ⵜⵉⵔⵎⵉⵜⵉⵏ",
+    "stories": "ⵜⵉⵏⵓⵢⴰ",
+    "reels": "ⵔⵉⵍⵣ",
+    "more": "ⵓⴳⴳⴰⵔ",
+    "explore": "ⵙⵙⵏ",
+    "chat": "ⴰⵡⴰⵍ AI",
+    "tours": "ⵉⵙⵡⴰⴼⵔⵏ",
+    "newsIntelligence": "ⵜⴰⵏⴽⵔⴰ ⵏ ⵉⵏⵖⵎⵉⵙⵏ",
+    "research": "ⵜⴰⵥⵔⵉⵜ",
+    "education": "ⵜⵓⵙⵙⵏⴰ",
+    "citation": "ⴰⵙⵏⴰⵜ",
+    "about": "ⵅⴼ",
+    "admin": "ⴰⵏⵙⵙⵉⵅⴼ",
+    "login": "ⴽⵛⵎ",
+    "register": "ⴰⵔⴰⵜⴰⵔ",
+    "logout": "ⴼⴼⵖ",
+    "profile": "ⵓⴷⵎ",
+    "settings": "ⵉⵙⵡⵉⵜⵏ",
+    "dictionary": "ⴰⵎⴰⵡⴰⵍ",
+    "upload": "ⴰⵣⵏ"
+  },
+  "hero": {
+    "title1": "ⵃⴹⴰ.",
+    "title2": "ⵙⵙⵏ.",
+    "title3": "ⴷⴷⵔ.",
+    "subtitle": "ⵙⵙⵏ ⵜⵓⵜⵍⴰⵢⵉⵏ, ⵙⵙⵏⴼⵍ ⵉⴷⵍⵉⵙⵏ, ⵙⵙⵏ ⵉⵎⴰⵣⵉⵖⵏ",
+    "cta": "ⵙⵏⵓ ⵜⵉⵔⵎⵉⵜ",
+    "watch": "ⵥⵕ ⴰⵎⵣⵓⵏ",
+    "cultures": "ⵜⵓⵙⵙⵏⴰ",
+    "artifacts": "ⵉⵙⴽⵯⴼⴰⵔ",
+    "documentaries": "ⵉⵎⵣⵓⵏⵏ",
+    "explore": "ⵙⵙⵏ",
+    "quickReels": "ⵔⵉⵍⵣ",
+    "quickMuseum": "ⴰⵙⵙⵓⵍ ⵏ ⵉⵙⴽⵯⴼⴰⵔ",
+    "quickChat": "ⴰⵎⵙⴰⵡⴰⵍ ⵏ AI",
+    "quickGlobe": "ⵜⴰⵙⵏⴰ ⵏ ⵓⵎⴰⴹⴰⵍ",
+    "quickStories": "ⵜⵉⵏⵓⵢⴰ ⵏ ⵉⵔⴳⴰⵣⵏ",
+    "quickQuests": "ⵜⵉⵔⵎⵉⵜⵉⵏ",
+    "statCultures": "8 ⵜⵓⵙⵙⵏⴰ",
+    "statArtifacts": "200+ ⵉⵙⴽⵯⴼⴰⵔ",
+    "statDocumentaries": "15 ⵉⵎⵣⵓⵏⵏ"
+  },
+  "globe": {
+    "description": "ⵙⵉⵜ ⵖⴼ ⵢⴰⵜ ⵜⴰⵎⴰⵜⴰⵔⵜ ⵙⵙⵏ ⵜⵓⵙⵙⵏⴰ, ⵜⵓⵜⵍⴰⵢⵉⵏ, ⵉⵙⵙⵓⵍⵓⵜⵏ ⴷ ⵉⴷⵖⴰⵔⵏ ⵏ ⵜⵓⵙⵙⵏⴰ"
+  },
+  "cultures": {
+    "title": "ⵜⵓⵙⵙⵏⴰ ⵉⵙⵜⴰⵡⵔⵏ",
+    "subtitle": "ⵔⴰⵢ ⵜⵓⵙⵙⵏⴰ ⵏ ⵓⴼⴳⴰⵏ ⵙ ⵓⵙⵙⵏⵎⵔ ⵏ ⵓⵔⴳⴰⵣ",
+    "explore": "ⵙⵙⵏ",
+    "viewAll": "ⵥⵕ ⵎⴰⵔⵔⴰ",
+    "about": "ⵙ ⵓⵏⴳⴰⵔ",
+    "traditions": "ⵉⴷⵓⵙⵏ",
+    "artifacts": "ⵉⵙⴽⵯⴼⴰⵔ",
+    "timeline": "ⴰⵣⵎⵣ",
+    "region": "ⴰⵢⴱⴰⵔ",
+    "noArtifacts": "ⵡⴰⵍⵓ ⵉⵙⴽⵯⴼⴰⵔ"
+  },
+  "documentaries": {
+    "title": "ⵉⵎⵣⵓⵏⵏ ⵏ ⵜⵓⵙⵙⵏⴰ",
+    "subtitle": "ⵔⵎⵉ ⴷ ⵜⵓⵙⵙⵏⴰ ⵜⴰⵎⵓⵏⵜ ⵙ ⵓⴼⵉⵍⵎ",
+    "watch": "ⵥⵕ",
+    "views": "ⵉⵎⵥⵕⵉⵢⵏ"
+  },
+  "map": {
+    "title": "ⵜⴰⵙⵏⴰ ⵏ ⵓⵎⴰⴹⴰⵍ ⵏ ⵜⵓⵙⵙⵏⴰ",
+    "subtitle": "ⴰⴼ ⵉⴷⵖⴰⵔⵏ ⵉⵎⴰⵣⵉⵖⵏ ⴷ ⵓⵔⵉⵚ ⴰⵏⴰⵎⵓⵏ"
+  },
+  "languages": {
+    "title": "ⵜⵓⵜⵍⴰⵢⵉⵏ ⵉⵎⵢⴰⵔⵏ",
+    "subtitle": "ⵢⴰⵜ ⵜⵓⵜⵍⴰⵢⵜ ⵜⴰⵎⵎⴰⵜ ⴽⵓ ⵙⵉⵏ ⵡⴰⵙⵙⵏ. ⴰⵡⵉ ⴰⴼⵓⵙ ⴰⴷ ⵜⵇⵇⵉⵎ.",
+    "learn": "ⵍⵎⴷ",
+    "speakers": "ⵉⵎⵙⴰⵡⵍⵏ",
+    "status": "ⴰⵏⴷⴰ",
+    "family": "ⵜⴰⴳⵍⴷⵉⵜ",
+    "hello": "ⴰⵣⵓⵍ",
+    "beginner": "ⴰⵎⴰⵢⵏⵓ",
+    "intermediate": "ⴰⵏⴰⵎⵎⴰⵙ",
+    "advanced": "ⴰⵏⴰⵢⵏⵓ"
+  },
+  "fashion": {
+    "title": "ⴰⵎⴰⵍⴰ ⵏ ⵜⵓⵙⵙⵏⴰ",
+    "subtitle": "ⵜⵉⵏⵍⴱⵉⵢⵉⵏ ⵉⵄⵇⵇⵔⵏ ⵓⵔⵉⵚ ⴷ ⵜⵉⵏⵉⴼⵉⵏ",
+    "wear": "ⵍⵙ"
+  },
+  "crafts": {
+    "title": "ⴰⵙⵓⵇ ⵏ ⵜⵓⵙⵙⵏⴰ",
+    "subtitle": "ⴽⵓ ⴰⵙⵖ ⵉⵜⵜⴰⵡⵙ ⵉ ⵓⵎⵙⵏⵏⵓ ⴷ ⵜⵓⵙⵙⵏⴰ",
+    "shop": "ⴰⵙⵖ",
+    "fairTrade": "ⴰⵙⵖ ⵓⵣⵣⵔⴰⵢ",
+    "by": "ⵙ"
+  },
+  "timeline": {
+    "title": "ⴰⵣⵎⵣ ⵏ ⵜⵓⵙⵙⵏⴰ",
+    "subtitle": "ⵉⵙⵓⵏⴰⴼ ⵉⵎⵇⵇⵔⴰⵏⵏ ⵏ ⵜⵓⵙⵙⵏⴰ ⵏ ⵓⴼⴳⴰⵏ",
+    "history": "ⴰⵎⵣⵔⵓⵢ"
+  },
+  "expeditions": {
+    "title": "ⵜⵉⵔⵎⵉⵜⵉⵏ ⵜⵉⵔⵎⵉⴷⵉⵏ",
+    "subtitle": "ⴰⵡⵉ ⴰⴼⵓⵙ ⵉ ⵜⵔⵎⵉⵜⵉⵏ ⵏ ⵓⵙⵡⵉⵔⵉ ⴷ ⵜⵓⵙⵙⵏⴰ",
+    "fieldwork": "ⴰⵙⵡⵉⵔⵉ ⴷ ⵜⵓⵙⵙⵏⴰ",
+    "lead": "ⴰⵎⵃⴹⴰⵕ",
+    "progress": "ⴰⵍⴰⴷ",
+    "active": "ⵉⵔⵎⵉⴷ",
+    "planning": "ⴰⵙⵓⴽⴰⵔ",
+    "completed": "ⵉⵏⵏⵉ"
+  },
+  "emergency": {
+    "title": "ⵜⴰⵙⵏⴰ ⵏ ⵓⵙⵏⵇⴹ ⵏ ⵜⵓⵙⵙⵏⴰ",
+    "subtitle": "ⵜⵉⵏⵖⵎⵉⵙⵉⵏ ⵏ ⵓⵙⵏⵇⴹ ⵙⴳ ⵜⵔⵎⵉⵜⵉⵏ ⵏ ⵜⵓⵙⵙⵏⴰ",
+    "urgent": "ⴰⵏⵇⴹ",
+    "critical": "ⴰⵏⵇⴹ ⴰⵎⵇⵔⴰⵏ",
+    "high": "ⴰⵎⵇⵔⴰⵏ",
+    "medium": "ⴰⵏⴰⵎⵎⴰⵙ"
+  },
+  "news": {
+    "title": "ⵉⵏⵖⵎⵉⵙⵏ ⵏ ⵜⵓⵙⵙⵏⴰ",
+    "subtitle": "ⵉⵏⵖⵎⵉⵙⵏ ⵏ ⵜⵓⵙⵙⵏⴰ ⴷ ⵉⵎⵣⵔⵓⵢⵏ ⵙⴳ ⵓⵎⴰⴹⴰⵍ",
+    "stayInformed": "ⵇⵇⵉⵎ ⵙ ⵓⵏⵖⵎⵉⵙ",
+    "allNews": "ⵎⴰⵔⵔⴰ ⵉⵏⵖⵎⵉⵙⵏ",
+    "backToNews": "ⴷⴳⵔ ⵖⵔ ⵉⵏⵖⵎⵉⵙⵏ",
+    "search": "ⵙⵉⴳⴳⵉⵍ ⵉⵏⵖⵎⵉⵙⵏ...",
+    "loadMore": "ⴰⵣⵏ ⵓⴳⴳⴰⵔ",
+    "loading": "ⴰⵍⴰⴷ..."
+  },
+  "art": {
+    "title": "ⵜⵉⵡⵓⵔⵉⵡⵉⵏ ⵏ ⵜⵓⵙⵙⵏⴰ",
+    "subtitle": "ⵜⵉⵡⵓⵔⵉⵡⵉⵏ ⵉⵙⵜⴰⵡⵔⵏ ⴰⴷ ⵜⵜⴰⵡⵙⵏⵜ ⵉ ⵜⵓⵙⵙⵏⴰ",
+    "support": "ⴰⵡⵉ ⴰⴼⵓⵙ",
+    "raised": "ⵉⵜⵜⵓⵎⵔ",
+    "goal": "ⴰⵙⵡⵉⵔ",
+    "backers": "ⵉⵏⵙⴰⵢⵏ"
+  },
+  "newsletter": {
+    "title": "ⴰⵔⴰⵜⴰⵔ ⵖⵔ ⵓⵏⵖⵎⵉⵙ ⵏⵏⵖ",
+    "subtitle": "ⴰⵡⵉ ⵉⵏⵖⵎⵉⵙⵏ ⵏ ⵜⵓⵙⵙⵏⴰ ⴽⵓ ⵓⵙⵙⵉⵎⵡⵉⵙ",
+    "placeholder": "your@email.com",
+    "subscribe": "ⴰⵔⴰⵜⴰⵔ",
+    "success": "ⵜⴰⵏⵎⵎⵉⵔⵜ ⵅⴼ ⵓⵔⴰⵜⴰⵔ!",
+    "error": "ⵜⴰⵣⵣⵍⴰ ⵜⴻⵜⵜⵓⵊⵕⴰ. ⵙⵓⵔ ⴷⴰⵖⵏ."
+  },
+  "footer": {
+    "tagline": "ⴰⵏⵙⴰ ⴰⵎⴰⴹⵍⴰⵏ ⵉ ⵓⵙⵙⵏⵎⵔ ⴷ ⵓⴼⴰⵔⵙ ⵏ ⵜⵓⵙⵙⵏⴰ ⵜⴰⵎⴰⵣⵉⵖⵜ",
+    "explore": "ⵙⵙⵏ",
+    "resources": "ⵉⵎⴰⵙⵙⵏ",
+    "legal": "ⴰⵣⵔⴼ",
+    "privacy": "ⵜⴰⵙⵔⵜⵉⵜ ⵏ ⵜⵉⵏⵏⵓⵜⵔⴰ",
+    "terms": "ⵡⴰⵏⵏⴰⵡⵏ ⵏ ⵓⵙⵉⵏⴼⵍ",
+    "attribution": "ⵜⵓⵙⵜⴰⵜⵉⵏ ⵏ ⵉⵡⵍⵉⵡⵏ",
+    "about": "ⵙ ⵓⵏⴳⴰⵔ",
+    "contact": "ⵜⵓⵏⵏⵉⵜ",
+    "research": "ⴰⵙⵡⵉⵔⵉ",
+    "copyright": "ⴰⴽⴽ ⵉⵣⵔⴼⴰⵏ ⵉⵜⵜⵓⵃⴹⴰⵏ",
+    "motto": "ⵃⴹⴰ. ⵙⵙⵏ. ⴷⴷⵔ."
+  }
+}

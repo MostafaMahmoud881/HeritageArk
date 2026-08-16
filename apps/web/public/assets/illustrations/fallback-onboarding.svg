@@ -1,0 +1,8 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="16" fill="#F8F5F0"/>
+  <path d="M100 40 L140 65 L140 115 L100 140 L60 115 L60 65 Z" fill="#D4A373" opacity="0.15" stroke="#D4A373" stroke-width="1.5"/>
+  <circle cx="100" cy="65" r="5" fill="#D4A373" opacity="0.3"/>
+  <circle cx="100" cy="90" r="3" fill="#D4A373" opacity="0.2"/>
+  <path d="M60 105 Q100 130 140 105" stroke="#D4A373" stroke-width="1" fill="none" opacity="0.15"/>
+  <text x="100" y="165" text-anchor="middle" fill="#D4A373" font-size="12" font-family="serif" opacity="0.5">Welcome to HeritageArk</text>
+</svg>

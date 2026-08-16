@@ -1,0 +1,54 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@heritageverse/ui": [
+        "../../packages/ui/src"
+      ],
+      "@heritageverse/types": [
+        "../../packages/types/src"
+      ],
+      "@heritageverse/auth": [
+        "../../packages/auth/src"
+      ]
+    },
+    "skipLibCheck": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "allowJs": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "e2e/**/*.ts",
+    "../../packages/auth/src/roles.ts",
+    "../../packages/auth/src/index.ts",
+    "../../packages/types/src/index.ts",
+    "../../packages/types/src/models/index.ts",
+    "../../packages/types/src/api/index.ts",
+    "../../packages/types/src/asset.ts",
+    "../../packages/ui/src/index.ts",
+    "../../packages/ui/src/primitives/index.ts",
+    "../../packages/ui/src/primitives/Button.tsx",
+    "../../packages/ui/src/primitives/Card.tsx",
+    "../../packages/ui/src/primitives/Input.tsx",
+    "../../packages/ui/src/primitives/Badge.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "vitest.config.ts",
+    "playwright.config.ts",
+    "__tests__",
+    "**/__tests__/**"
+  ]
+}

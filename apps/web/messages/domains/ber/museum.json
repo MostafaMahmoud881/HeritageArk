@@ -1,0 +1,21 @@
+{
+  "museum": {
+    "title": "ⴰⵙⵙⵓⵍ ⵓⵎⵣⵔⵓⵢ",
+    "subtitle": "ⴰⵡⵉ ⵜⵉⵙⴽⵯⴼⴰⵔ ⵏ ⵣⵉⴽⴽ ⵙ ⵓⵙⵙⵏⵎⵔ",
+    "explore": "ⵙⵙⵏ",
+    "featured": "ⵉⵙⵜⴰⵡⵔⵏ",
+    "recent": "ⵉⵎⴳⴳⵓⵔⴰ",
+    "categories": "ⵜⴰⵙⵎⵉⵍⵉⵏ",
+    "searchArtifacts": "ⵙⵉⴳⴳⵉⵍ ⵉⵙⴽⵯⴼⴰⵔ...",
+    "noArtifacts": "ⵡⴰⵍⵓ ⵉⵙⴽⵯⴼⴰⵔ",
+    "viewIn3d": "ⵥⵕ ⵙ 3D",
+    "artifactDetails": "ⵉⵏⵖⵎⵉⵙⵏ ⵏ ⵓⵙⴽⵯⴼ",
+    "era": "ⴰⵣⵎⵣ",
+    "origin": "ⴰⵢⴱⴰⵔ",
+    "material": "ⴰⴽⵯⵚⴰ",
+    "dimensions": "ⵜⵉⵙⵏⴰⵡⵉⵏ",
+    "discover": "ⴰⴼ",
+    "previewDescription": "ⵙⵙⵏ ⵉⵙⴽⵯⴼⴰⵔ ⵙ 3D — ⵥⵕ, ⵙⵉⴳⴳⵉⵍ, ⴷ ⴰⴼ ⵜⵉⵏⵓⵢⴰ ⵏ ⵜⵓⵙⵙⵏⴰ",
+    "enter": "ⴽⵛⵎ ⵖⵔ ⵓⵙⵙⵓⵍ"
+  }
+}

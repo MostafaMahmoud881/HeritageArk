@@ -1,0 +1,12 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="16" fill="#F8F5F0"/>
+  <rect x="60" y="50" width="80" height="95" rx="4" fill="#D4A373" opacity="0.15" stroke="#D4A373" stroke-width="1.5"/>
+  <text x="100" y="80" text-anchor="middle" fill="#D4A373" font-size="32" font-family="serif" opacity="0.5">A</text>
+  <text x="100" y="105" text-anchor="middle" fill="#D4A373" font-size="12" font-family="serif" opacity="0.4">knowledge</text>
+  <rect x="70" y="115" width="60" height="2" rx="1" fill="#D4A373" opacity="0.3"/>
+  <rect x="75" y="122" width="50" height="2" rx="1" fill="#D4A373" opacity="0.2"/>
+  <rect x="80" y="129" width="40" height="2" rx="1" fill="#D4A373" opacity="0.15"/>
+  <circle cx="100" cy="165" r="8" fill="#D4A373" opacity="0.2"/>
+  <line x1="100" y1="157" x2="100" y2="173" stroke="#D4A373" stroke-width="1.5" opacity="0.3"/>
+  <line x1="92" y1="165" x2="108" y2="165" stroke="#D4A373" stroke-width="1.5" opacity="0.3"/>
+</svg>

@@ -1,0 +1,167 @@
+{
+  "nav": {
+    "home": "Home",
+    "documentaries": "Documentaries",
+    "museum": "Museum",
+    "map": "Heritage Map",
+    "languages": "Languages",
+    "news": "News",
+    "cultures": "Cultures",
+    "crafts": "Crafts",
+    "fashion": "Fashion",
+    "timeline": "Timeline",
+    "expeditions": "Expeditions",
+    "reels": "Reels",
+    "stories": "Stories",
+    "more": "More",
+    "explore": "Explore",
+    "chat": "AI Chat",
+    "tours": "Tours",
+    "newsIntelligence": "News Intelligence",
+    "research": "Research",
+    "education": "Education",
+    "citation": "Citation",
+    "about": "About",
+    "admin": "Admin",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "profile": "Profile",
+    "settings": "Settings",
+    "dictionary": "Dictionary",
+    "upload": "Upload"
+  },
+  "hero": {
+    "title1": "Preserve.",
+    "title2": "Explore.",
+    "title3": "Revive.",
+    "subtitle": "Journey through the world's cultural heritage — from ancient civilizations to living traditions.",
+    "cta": "Start Exploring",
+    "watch": "Watch Documentary",
+    "cultures": "Cultures",
+    "artifacts": "Artifacts",
+    "documentaries": "Documentaries",
+    "explore": "Explore",
+    "quickReels": "Reels",
+    "quickMuseum": "Virtual Museum",
+    "quickChat": "AI Chat",
+    "quickGlobe": "Heritage Globe",
+    "quickStories": "Kids Stories",
+    "quickQuests": "Quests",
+    "statCultures": "8 Cultures",
+    "statArtifacts": "200+ Artifacts",
+    "statDocumentaries": "15 Documentaries"
+  },
+  "globe": {
+    "description": "Click any marker to discover cultures, languages, museums, and heritage sites"
+  },
+  "cultures": {
+    "title": "Featured Cultures",
+    "subtitle": "Discover the rich tapestry of human civilization through our curated collection of cultures.",
+    "explore": "Explore",
+    "viewAll": "View All",
+    "about": "About",
+    "traditions": "Traditions",
+    "artifacts": "Artifacts",
+    "timeline": "Timeline",
+    "region": "Region",
+    "noArtifacts": "No artifacts yet."
+  },
+  "documentaries": {
+    "title": "Heritage Documentaries",
+    "subtitle": "Journey through living traditions and ancient crafts captured on film.",
+    "watch": "Watch",
+    "views": "views"
+  },
+  "map": {
+    "title": "Cultural Heritage Worldwide",
+    "subtitle": "Discover heritage sites, communities, and cultural landmarks around the globe."
+  },
+  "languages": {
+    "title": "Endangered Languages",
+    "subtitle": "Every two weeks a language dies. Help keep these voices alive.",
+    "learn": "Learn",
+    "speakers": "speakers",
+    "status": "Status",
+    "family": "Family",
+    "hello": "Hello",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
+  "fashion": {
+    "title": "Heritage Fashion",
+    "subtitle": "Garments that carry centuries of identity, craftsmanship, and meaning.",
+    "wear": "Wear"
+  },
+  "crafts": {
+    "title": "Artisan Marketplace",
+    "subtitle": "Every purchase supports a master craftsperson and keeps a tradition alive.",
+    "shop": "Shop",
+    "fairTrade": "Fair Trade",
+    "by": "by"
+  },
+  "timeline": {
+    "title": "Cultural Timeline",
+    "subtitle": "Key moments that shaped our shared human heritage.",
+    "history": "History"
+  },
+  "expeditions": {
+    "title": "Active Expeditions",
+    "subtitle": "Support real research missions documenting heritage before it is lost.",
+    "fieldwork": "Fieldwork",
+    "lead": "Lead",
+    "progress": "Progress",
+    "active": "Active",
+    "planning": "Planning",
+    "completed": "Completed"
+  },
+  "emergency": {
+    "title": "Heritage Emergency Dashboard",
+    "subtitle": "Real-time alerts from heritage preservation field teams worldwide.",
+    "urgent": "Urgent",
+    "critical": "Critical",
+    "high": "High",
+    "medium": "Medium"
+  },
+  "news": {
+    "title": "Heritage News",
+    "subtitle": "Curated heritage and archaeology news from museums, universities, and cultural institutions worldwide.",
+    "stayInformed": "Stay Informed",
+    "allNews": "All News",
+    "backToNews": "Back to News",
+    "search": "Search news...",
+    "loadMore": "Load More",
+    "loading": "Loading..."
+  },
+  "art": {
+    "title": "Art for Preservation",
+    "subtitle": "Limited-edition art where every purchase funds a heritage mission.",
+    "support": "Support",
+    "raised": "raised",
+    "goal": "goal",
+    "backers": "backers"
+  },
+  "newsletter": {
+    "title": "Join Our Newsletter",
+    "subtitle": "Receive weekly heritage news, featured cultures, and exclusive documentary releases.",
+    "placeholder": "your@email.com",
+    "subscribe": "Subscribe",
+    "success": "Thank you for subscribing!",
+    "error": "Something went wrong. Try again."
+  },
+  "footer": {
+    "tagline": "Preserving and sharing the world's cultural heritage through immersive storytelling.",
+    "explore": "Explore",
+    "resources": "Resources",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "attribution": "Image Attribution",
+    "about": "About",
+    "contact": "Contact",
+    "research": "Research",
+    "copyright": "All rights reserved.",
+    "motto": "Preserve. Explore. Revive."
+  }
+}

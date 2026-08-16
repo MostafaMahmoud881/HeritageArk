@@ -1,0 +1,24 @@
+{
+  "stories": {
+    "title": "Cultural Stories",
+    "subtitle": "Oral traditions passed through generations — each telling is an act of preservation.",
+    "listen": "Listen",
+    "pageTitle": "Story Teller",
+    "pageSubtitle": "Discover the rich heritage of Africa and the Middle East through the eyes of our storytellers.",
+    "complete": "Story Complete!",
+    "finished": "You finished",
+    "possesive": "'s",
+    "story": "story",
+    "pointsEarned": "Points Earned",
+    "perfectScore": "Perfect score!",
+    "greatJob": "Great job!",
+    "keepExploring": "Keep exploring!",
+    "back": "Back to stories",
+    "points": "Points",
+    "narrating": "Narrating",
+    "you": "You",
+    "answerWas": "The answer was",
+    "whatNext": "What happens next?",
+    "listening": "Listening..."
+  }
+}

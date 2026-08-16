@@ -1,0 +1,25 @@
+{
+  "chat": {
+    "title": "Chat IA pour langues autochtones",
+    "subtitle": "Pratiquez les langues menacées par la conversation avec l'IA.",
+    "placeholder": "Tapez un message...",
+    "send": "Envoyer",
+    "voiceInput": "Entrée vocale",
+    "voiceOutput": "Sortie vocale",
+    "stopRecording": "Arrêter l'enregistrement",
+    "startRecording": "Commencer l'enregistrement",
+    "selectLanguage": "Choisir la langue",
+    "selectDialect": "Choisir le dialecte",
+    "translation": "Traduction",
+    "pronunciation": "Prononciation",
+    "learningMode": "Mode apprentissage",
+    "conversationMode": "Mode conversation",
+    "culturalContext": "Contexte culturel",
+    "clearHistory": "Effacer l'historique",
+    "history": "Historique des conversations",
+    "speakNow": "Parlez maintenant...",
+    "listening": "Écoute...",
+    "processing": "Traitement...",
+    "error": "Une erreur s'est produite. Veuillez réessayer."
+  }
+}
